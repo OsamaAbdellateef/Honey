@@ -1,0 +1,277 @@
+*{
+    
+    text-transform: capitalize;
+    color: black;
+
+}
+.dragedItem {
+    margin-top: 90px;
+    background: none;
+}
+
+.dragedItem h2 , .dragedItem p ,.addCart, .buttons,.dragedItem .price-container{
+    margin: 30px
+}
+
+.dragedItem .addCart {
+    width: 154px;
+    padding: 7px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    /* font-family: open-sans; */
+    cursor: pointer;
+    transition: all 200ms ease-in-out
+}
+
+.dragedItem .addCart:hover {
+    background: #ff8c25
+}
+
+.dragedItem h2 {
+    font-family: 'montserrat';
+    font-weight: bolder
+}
+
+.dragedItem img {
+
+    border-radius: 6px
+}
+
+.buttons {
+    display:inline-block;
+    margin-right: 10px;
+    width: 140px;
+    height: 39px;
+    position: relative;
+    background: #FAFAFA;
+}
+
+.dec , .inc {
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+    background:transparent
+}
+
+.dec {
+    left: 0px;
+}
+
+.inc {
+    right: 0px;
+}
+
+.dragedItem input {
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    height: 100%;
+    text-align: center;
+    background: transparent;
+    border: none
+}
+
+.inc:focus , .dec:focus , .dragedItem input:focus,.dragedItem .addCart:focus {
+    outline: none
+}
+
+.kg {
+    position: absolute;
+    left: 150px;
+    font-weight: 600;
+    bottom: 8px;
+}
+/*starting cart*/
+
+.over-cart {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: #000000a1;
+    z-index: 20;
+    display: none
+}
+
+.slide-cart {
+    position: fixed;
+    width: 35%;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    background: white;
+    /*animation: slideOut 800ms forwards*/
+    visibility: visible
+}
+
+.slide-cart .row {
+    margin:0px;
+    padding: 10px 
+}
+
+.slide-col {
+    position: relative;
+    padding: 10px 0px;
+    border-bottom: 0.5px solid #13131314;
+    margin-bottom: 10px
+}
+
+.slide-col:nth-of-type(3) {
+    height: 90px;
+}
+
+.slide-cart i {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0 , -50%);
+    font-size: 24px
+
+}
+
+.slide-col img {
+    width: 120px;
+    height: 100px;
+}
+
+.slide-col h5 {
+    position: absolute;
+    left: 140px;
+    top: 15px
+}
+
+.slide-col input {
+    position: absolute;
+    left: 140px;
+    bottom: 10px;
+    text-align: center;
+    border: 1px solid whitesmoke
+}
+
+.slide-col .price-container {
+    position: absolute;
+    bottom: 10px;
+    /* right: 10px; */
+    left: 140px;
+    top: 46px;
+    font-weight: bold;
+}
+
+.slide-col .subtotal {
+    position: absolute;
+    left: 20px;
+}
+
+.slide-col .total-container {
+    position: absolute;
+    right: 20px
+}
+
+.slide-col .checkout {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 60%;
+    background: #e67e22;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px
+}
+
+.slide-col .checkout:focus{
+    background: #ff8c25
+}
+
+@keyframes slideOut {
+    from {
+        right: 0%;
+    } to {
+        right: -35%;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        right: -35%;
+    } to {
+        right: 0%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+.kg2 {
+    position: absolute;
+    right: 21%;
+    bottom: 10px;
+
+}
+
+/*media for slider */
+@media (max-width:1030px) {
+    .slide-col input {
+        width: 117px
+    }
+
+    .slide-cart {
+        width: 40%
+    }
+}
+
+@media (max-width:767px) {
+    .slide-cart {
+        width: 50%
+    }
+
+    
+
+}
+
+@media (max-width:560px) {
+    .slide-cart {
+        width: 60%
+    }
+    .slide-col input {
+        width: 70px
+    }
+}
+
+@media (max-width:450px) {
+    .slide-cart {
+        width: 80%
+    }
+
+    .kg2 {
+        right: 0%;
+    
+    }
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
